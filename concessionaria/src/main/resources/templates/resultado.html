@@ -6,7 +6,7 @@
 </head>
 <body>
 	<h2>Lista de Carros na Concessionária</h2>
-	<table>
+	<table class="table table-bordered">
 		<tr>
 			<th>Placa</th>
 			<th>Fabricante do Veículo</th>
@@ -22,21 +22,6 @@
 			<td data-th-text="${carro.anoModelo}">Ano do Modelo</td>
 		</tr>
 	</table>
-	 <!--
-	<div th:unless="${#lists.isEmpty(carros)}">
-		<dl th:each="carro : ${carros}">
-			<dt class="carroConteudo">
-				<span th:text="${carro.id}">id</span> / <span
-					th:text="${carro.placa}">placa</span> / <span
-					th:text="${carro.fabricanteVeiculo}">fabricante_do_veiculo</span> /
-				<span th:text="${carro.marcaVeiculo }">marca_do_veiculo</span> / <span
-					th:text="${carro.anoFabricacao}">ano_de_fabricacao</span> / <span
-					th:text="${carro.anoModelo}">ano_do_modelo</span> /
-			</dt>
-		</dl>
-	</div>
-	-->
-
 	<a href="/cadastro">Voltar para o início</a>
 </body>
 </html>

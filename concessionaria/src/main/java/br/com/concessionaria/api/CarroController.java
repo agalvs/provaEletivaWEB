@@ -36,7 +36,7 @@ public class CarroController {
 		model.addAttribute("carros", carroRepository.findAll());
 		return "resultado";
 	}
-	
+	/*
 	@GetMapping("/resultado/placa")
 	public String pesquisaGetPlaca(@ModelAttribute Carro pesquisa, Model model) {
 		model.addAttribute("pesquisa", pesquisa);
@@ -55,6 +55,14 @@ public class CarroController {
 	public String pesquisaGetMarca(@ModelAttribute Carro pesquisa, Model model) {
 		model.addAttribute("pesquisa", pesquisa);
 		model.addAttribute("carros", carroRepository.findByMarcaVeiculoContainingIgnoreCase(pesquisa.getMarcaVeiculo()));
+		return "resultado";
+	}
+	*/
+	
+	@GetMapping("/resultado/pesquisa")
+	public String pesquisaGet(@ModelAttribute Carro pesquisa, Model model) {
+		model.addAttribute("pesquisa", pesquisa);
+		model.addAttribute("carros", carroRepository.findByPlacaContainingIgnoreCaseAndFabricanteVeiculoContainingIgnoreCaseAndMarcaVeiculoContainingIgnoreCase(pesquisa.getPlaca(), pesquisa.getFabricanteVeiculo(), pesquisa.getMarcaVeiculo()));
 		return "resultado";
 	}
 }

@@ -25,7 +25,7 @@ public class CarroService {
 	public void saveAll(List<Carro> carros) {
 		repository.saveAll(carros);
 	}
-	
+	/*
 	public List<Carro> findByPlaca(Carro carro) {
 		return repository.findByPlacaContainingIgnoreCase(carro.getPlaca());
 	}
@@ -36,6 +36,11 @@ public class CarroService {
 	
 	public List<Carro> findByMarcaVeiculo(Carro carro) {
 		return repository.findByMarcaVeiculoContainingIgnoreCase(carro.getMarcaVeiculo());
+	}
+	*/
+	
+	public List<Carro> findByPlacaAndFabricanteVeiculoAndMarcaVeiculo(Carro carro) {
+		return repository.findByPlacaContainingIgnoreCaseAndFabricanteVeiculoContainingIgnoreCaseAndMarcaVeiculoContainingIgnoreCase(carro.getPlaca(), carro.getFabricanteVeiculo(), carro.getMarcaVeiculo());
 	}
 	
 }
