@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<title>Página de Registros</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h2>Lista de Carros na Concessionária</h2>
+	<table>
+		<tr>
+			<th>Placa</th>
+			<th>Fabricante do Veículo</th>
+			<th>Marca do Veículo</th>
+			<th>Ano da Fabricação</th>
+			<th>Ano do Modelo</th>
+		</tr>
+		<tr data-th-each="carro : ${carros}">
+			<td data-th-text="${carro.placa}">Placa</td>
+			<td data-th-text="${carro.fabricanteVeiculo}">Fabricante de Veículo</td>
+			<td data-th-text="${carro.marcaVeiculo}">Marca do Veículo</td>
+			<td data-th-text="${carro.anoFabricacao}">Ano da Fabricação</td>
+			<td data-th-text="${carro.anoModelo}">Ano do Modelo</td>
+		</tr>
+	</table>
+	 <!--
+	<div th:unless="${#lists.isEmpty(carros)}">
+		<dl th:each="carro : ${carros}">
+			<dt class="carroConteudo">
+				<span th:text="${carro.id}">id</span> / <span
+					th:text="${carro.placa}">placa</span> / <span
+					th:text="${carro.fabricanteVeiculo}">fabricante_do_veiculo</span> /
+				<span th:text="${carro.marcaVeiculo }">marca_do_veiculo</span> / <span
+					th:text="${carro.anoFabricacao}">ano_de_fabricacao</span> / <span
+					th:text="${carro.anoModelo}">ano_do_modelo</span> /
+			</dt>
+		</dl>
+	</div>
+	-->
+
+	<a href="/cadastro">Voltar para o início</a>
+</body>
+</html>
