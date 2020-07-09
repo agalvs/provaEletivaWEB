@@ -11,7 +11,7 @@
 	<groupId>com.example</groupId>
 	<artifactId>handling-form-concessionaria</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>handling-form-submission</name>
+	<name>handling-form-concessionaria</name>
 	<description>Prova WEB.</description>
 
 	<properties>

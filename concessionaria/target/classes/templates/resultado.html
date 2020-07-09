@@ -3,25 +3,29 @@
 <head>
 <title>Página de Registros</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link th:href="@{/css/bootstrap.css}" rel="stylesheet" type="text/css" />
+<!--<link href="../static/css/bootstrap.css" rel="stylesheet" type="text/css" /> -->
 </head>
 <body>
-	<h2>Lista de Carros na Concessionária</h2>
-	<table class="table table-bordered">
-		<tr>
-			<th>Placa</th>
-			<th>Fabricante do Veículo</th>
-			<th>Marca do Veículo</th>
-			<th>Ano da Fabricação</th>
-			<th>Ano do Modelo</th>
-		</tr>
-		<tr data-th-each="carro : ${carros}">
-			<td data-th-text="${carro.placa}">Placa</td>
-			<td data-th-text="${carro.fabricanteVeiculo}">Fabricante de Veículo</td>
-			<td data-th-text="${carro.marcaVeiculo}">Marca do Veículo</td>
-			<td data-th-text="${carro.anoFabricacao}">Ano da Fabricação</td>
-			<td data-th-text="${carro.anoModelo}">Ano do Modelo</td>
-		</tr>
-	</table>
-	<a href="/cadastro">Voltar para o início</a>
+	<div class="container">
+		<h2>Lista de Carros na Concessionária</h2>
+		<table class="table table-bordered">
+			<tr>
+				<th>Placa</th>
+				<th>Fabricante do Veículo</th>
+				<th>Marca do Veículo</th>
+				<th>Ano da Fabricação</th>
+				<th>Ano do Modelo</th>
+			</tr>
+			<tr data-th-each="carro : ${carros}">
+				<td data-th-text="${carro.placa}">Placa</td>
+				<td data-th-text="${carro.fabricanteVeiculo}">Fabricante de Veículo</td>
+				<td data-th-text="${carro.marcaVeiculo}">Marca do Veículo</td>
+				<td data-th-text="${carro.anoFabricacao}">Ano da Fabricação</td>
+				<td data-th-text="${carro.anoModelo}">Ano do Modelo</td>
+			</tr>
+		</table>
+		<a href="/cadastro"> <button type="button">Voltar para o início</button></a> 
+	</div>
 </body>
 </html>

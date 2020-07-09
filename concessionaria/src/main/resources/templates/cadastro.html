@@ -3,38 +3,32 @@
 <head>
 <title>Página de Cadastro</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link th:href="@{/css/bootstrap.css}" rel="stylesheet" type="text/css" />
+<!--<link href="../static/css/bootstrap.css" rel="stylesheet" type="text/css" />-->
 </head>
 <body>
-	<h2>Adicione um novo carro na concessionária</h2>
-	<form action="#" th:action="@{/cadastro}" th:object="${carro}"
-		method="post">
-		<p>Placa: <input type="text" th:field="*{placa}" required /></p>
-		<p>Fabricante do Veículo: <input type="text" th:field="*{fabricanteVeiculo}" required /></p>
-		<p>Marca do Veículo: <input type="text" th:field="*{marcaVeiculo}" required /></p>
-		<p>Ano da Fabricação: <input type="text" th:field="*{anoFabricacao}" required /></p>
-		<p>Ano do Modelo: <input type="text" th:field="*{anoModelo}" /></p>
-		<p><input type="submit" value="Cadastrar" /> <input type="reset" value="Limpar" required /></p>
-	</form>
+	<div class="container">
+		<h2>Adicione um novo carro na concessionária</h2>
+		<form action="#" th:action="@{/cadastro}" th:object="${carro}"
+			method="post">
+			<p>Placa: <input type="text" th:field="*{placa}" required /></p>
+			<p>Fabricante do Veículo: <input type="text" th:field="*{fabricanteVeiculo}" required /></p>
+			<p>Marca do Veículo: <input type="text" th:field="*{marcaVeiculo}" required /></p>
+			<p>Ano da Fabricação: <input type="text" th:field="*{anoFabricacao}" required /></p>
+			<p>Ano do Modelo: <input type="text" th:field="*{anoModelo}" /></p>
+			<p><input type="submit" value="Cadastrar" /> <input type="reset" value="Limpar"/></p>
+		</form>
+	</div>
 	<br>
-	<br>
-	<!--
-    <form action="#" th:action="@{/resultado/placa}" th:object="${pesquisa}" method="get">
-    	<p> Por Placa: <input type="text" th:field="*{placa}" /> <input type="submit" value="Pesquisar" /></p>
-    </form>
-    <form action="#" th:action="@{/resultado/fabricante}" th:object="${pesquisa}" method="get">
-    	<p> Por Fabricante do Veículo: <input type="text" th:field="*{fabricanteVeiculo}" /> <input type="submit" value="Pesquisar" /></p>
-    </form>
-    <form action="#" th:action="@{/resultado/marca}" th:object="${pesquisa}" method="get">
-    	<p> Por Marca do Veículo: <input type="text" th:field="*{marcaVeiculo}" /> <input type="submit" value="Pesquisar" /></p>
-    </form>
-     -->
-	<h2>Procurar um carro na concessionária</h2>
-	<form action="#" th:action="@{/resultado/pesquisa}"
-		th:object="${pesquisa}" method="get">
-		<p>Por Placa: <input type="text" th:field="*{placa}" /></p>
-		<p>Por Fabricante do Veículo: <input type="text" th:field="*{fabricanteVeiculo}" /> </p>
-		<p>Por Marca do Veículo: <input type="text" th:field="*{marcaVeiculo}" /></p>
-		<p><input type="submit" value="Pesquisar" /></p>
-	</form>
+	 <div class="container">
+		<h2>Procurar um carro na concessionária</h2>
+		<form action="#" th:action="@{/resultado/pesquisa}"
+			th:object="${pesquisa}" method="get">
+			<p>Por Placa: <input type="text" th:field="*{placa}" /></p>
+			<p>Por Fabricante do Veículo: <input type="text" th:field="*{fabricanteVeiculo}" /> </p>
+			<p>Por Marca do Veículo: <input type="text" th:field="*{marcaVeiculo}" /></p>
+			<p><input type="submit" value="Pesquisar" /></p>
+		</form>
+	</div>
 </body>
 </html>
